@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { searchInputValue } from './Controls-actions';
+import { inputValueAction } from './Controls-actions';
 
 class Controls extends React.Component { 
   
@@ -31,7 +31,7 @@ class Controls extends React.Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    searchInputValue: (inputValue) => dispatch(searchInputValue(inputValue))
+    searchInputValue: (inputValue) => dispatch(inputValueAction(inputValue))
   }
 };
 
