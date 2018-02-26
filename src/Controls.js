@@ -10,9 +10,15 @@ class Controls extends React.Component {
     };
   }
 
+  inputChange = (event) => {
+    this.setState({
+      inputValue: event.target.value,
+    });
+  }
+
   render() {
     return (
-      <input type="text" placeholder="Search here" />
+      <input type="text" placeholder="Search here" onChange={this.inputChange}/>
     )
   }
 
