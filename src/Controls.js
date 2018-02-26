@@ -1,7 +1,11 @@
 import React from 'react';
 
-const Controls = () => ( 
-  <input type="text" placeholder="Search here" />
-);
+class Controls extends React.Component { 
+  render() {
+    return (
+      <input type="text" placeholder="Search here" />
+    )
+  }
+};
 
 export default Controls;
