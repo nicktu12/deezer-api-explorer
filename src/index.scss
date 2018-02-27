@@ -16,3 +16,26 @@ $dark-text: #7a7a7a;
 .App {
   padding: 5%;
 }
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    width: 80%;
+    background-color: $background-medium;
+    color: $dark-text;
+    padding-left: 12px;
+  }
+
+  button {
+    width: 15%;
+    background-color: $accent;
+  }
+
+  input, button {
+    height: 50px;
+    border: none;
+    font-size: 16px;
+  }
+}
