@@ -94,23 +94,34 @@ h3 {
 }
 
 .release-details {
-  margin-top: 30px;
-  padding-left: calc(20vw + 20px);
-  padding-top: 10vw;
+  margin-top: 10vw;
   position: relative;
   width: 100%;
   text-align: left;
   color: $light-text;
   font-size: 14px;
+  border-collapse: collapse;
+
+  .empty-space {
+    width: calc(20vw + 20px);
+  }
 
   img {
     width: 20vw;
     position: absolute;
     left: 10px;
-    top: 0;
+    top: -10vh;
+  }
+
+  .table-header-tr {
+    height: 32px;
   }
 
   .album-track-tr {
     height: 32px;
+
+    td {
+      background-color: $background-light;
+    }
   }
 }

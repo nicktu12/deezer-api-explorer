@@ -63,20 +63,25 @@ h3 {
     text-overflow: ellipsis; }
 
 .release-details {
-  margin-top: 30px;
-  padding-left: calc(20vw + 20px);
-  padding-top: 10vw;
+  margin-top: 10vw;
   position: relative;
   width: 100%;
   text-align: left;
   color: #ededed;
-  font-size: 14px; }
+  font-size: 14px;
+  border-collapse: collapse; }
+  .release-details .empty-space {
+    width: calc(20vw + 20px); }
   .release-details img {
     width: 20vw;
     position: absolute;
     left: 10px;
-    top: 0; }
+    top: -10vh; }
+  .release-details .table-header-tr {
+    height: 32px; }
   .release-details .album-track-tr {
     height: 32px; }
+    .release-details .album-track-tr td {
+      background-color: #2a2a2a; }
 
 /*# sourceMappingURL=index.css.map */

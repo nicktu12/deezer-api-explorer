@@ -3,7 +3,8 @@ import React from 'react';
 const ReleaseDetails = (props) => (
   <table className="release-details">
     <img src={props.albumDetails.albumCover}/>
-    <tr>
+    <tr className="table-header-tr">
+      <th className="empty-space"></th>
       <th>#</th>
       <th>Title</th>
       <th>Artist</th>
@@ -13,6 +14,7 @@ const ReleaseDetails = (props) => (
     {
       props.albumDetails.albumTracks.map((track, index) => (
         <tr className="album-track-tr">
+          <td className="empty-space"></td>
           <td>{index + 1}</td>
           <td>{track.trackTitle}</td>
           <td>{track.trackArtist}</td>
