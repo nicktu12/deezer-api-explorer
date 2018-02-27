@@ -95,8 +95,14 @@ h3 {
 
 .release-details {
   margin-top: 30px;
+  padding-left: calc(20vw + 20px);
+  padding-top: 10vw;
+  position: relative;
 
   img {
-    width: 20vw;  
+    width: 20vw;
+    position: absolute;
+    left: 10px;
+    top: 0;
   }
 }
