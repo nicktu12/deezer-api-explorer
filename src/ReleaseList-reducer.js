@@ -6,3 +6,12 @@ export function selectedRelease(state = '', action) {
       return state;
   }
 }
+
+export function albumDetails(state = {}, action) {
+  switch (action.type) {
+    case 'ALBUM_DETAILS':
+      return action.releaseDetails;
+    default:
+      return state;
+  }
+}

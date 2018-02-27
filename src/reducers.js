@@ -3,10 +3,14 @@ import {
   autocompleteOptions,
   albumResults
 } from './Controls-reducer';
-import { selectedRelease } from './ReleaseList-reducer';
+import { 
+  selectedRelease,
+  albumDetails
+} from './ReleaseList-reducer';
 
 export default combineReducers({
   autocompleteOptions,
   albumResults,
   selectedRelease,
+  albumDetails,
 });
