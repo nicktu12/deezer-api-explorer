@@ -12,6 +12,15 @@ class Controls extends React.Component {
     };
   }
 
+  shouldComponentUpdate(nextProps) {
+    console.log(nextProps, this.props)
+    if (this.props.autocompleteOptions.length) {
+      return nextProps.autocompleteOptions === this.props.autocompleteOptions;
+    } else {
+      return true
+    }
+  }
+
   inputChange = event => {
     this.setState({
       inputValue: event.target.value,
