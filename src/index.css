@@ -62,4 +62,9 @@ h3 {
     overflow: hidden;
     text-overflow: ellipsis; }
 
+.release-details {
+  margin-top: 30px; }
+  .release-details img {
+    width: 20vw; }
+
 /*# sourceMappingURL=index.css.map */

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ReleaseDetails = (props) => (
-  <table>
+  <table className="release-details">
     <img src={props.albumDetails.albumCover}/>
     <tr>
       <th>#</th>
