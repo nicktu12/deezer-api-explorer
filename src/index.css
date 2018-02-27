@@ -28,8 +28,7 @@ h3 {
   font-weight: 400;
   color: #02ffff;
   margin-top: 15px;
-  padding: 7px;
-  position: fixed; }
+  padding: 7px; }
 
 .release-list hr {
   height: 2px;
@@ -39,7 +38,7 @@ h3 {
   font-size: 0;
   border: 0; }
 .release-list article {
-  margin: 54px 5px 5px 5px;
+  margin: 5px;
   white-space: nowrap;
   overflow-x: scroll; }
 

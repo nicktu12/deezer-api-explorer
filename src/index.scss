@@ -47,7 +47,6 @@ h3 {
   color: $accent;
   margin-top: 15px;
   padding: 7px;
-  position: fixed;
 }
 
 .release-list {
@@ -62,7 +61,7 @@ h3 {
   }
 
   article {
-    margin: 54px 5px 5px 5px;
+    margin: 5px;
     white-space: nowrap;
     overflow-x: scroll;
   }

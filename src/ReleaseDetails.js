@@ -2,6 +2,7 @@ import React from 'react';
 
 const ReleaseDetails = (props) => (
   <table>
+    <img src={props.albumDetails.albumCover}/>
     <tr>
       <th>#</th>
       <th>Title</th>
