@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ReleaseThumbnail from './ReleaseThumbnail'
+import ReleaseThumbnail from './ReleaseThumbnail';
+import { selectRelease } from './ReleaseList-actions.js';
 
 class ReleaseList extends React.Component{
   constructor() {
@@ -20,10 +21,16 @@ class ReleaseList extends React.Component{
             this.props.albumResults.map(album => (
               <ReleaseThumbnail 
                 albumImage={album.albumImage}
-                albumLink={album.albumLink}
                 albumTitle={album.albumTitle}
+                albumLink={album.albumLink}
+                selectRelease={this.props.selectReleaseAction}
               />
             ))
+          }
+          </article>
+          <article>
+          {
+          
           }
           </article>
         </div>
@@ -37,8 +44,8 @@ const mapStateToProps = store => ({
   albumResults: store.albumResults, 
 })
 
-const mapDispatchToProps = dispatch => {
-
-}
+const mapDispatchToProps = dispatch => ({
+  selectReleaseAction: (link) => dispatch(selectRelease(link))
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReleaseList);

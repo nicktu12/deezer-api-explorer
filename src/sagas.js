@@ -1,5 +1,5 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { retrieveSearchResults, retrieveAlbums } from './utilities';
+import { retrieveSearchResults, retrieveAlbums, retrieveReleaseDetails } from './utilities';
 
 function* searchInputValue(action) {
   try {
@@ -19,6 +19,14 @@ function* searchInputId(action) {
   }
 }
 
+function* selectRelease(action) {
+  try {
+    const releaseDetails = yield call(retrieveReleaseDetails, action.link)
+  } catch (error) {
+    yield put({ type: 'SELECT_RELEASE_ERROR', message: error.message });
+  }
+}
+
 function* listenForInputValue() {
   yield takeLatest('INPUT_VALUE', searchInputValue);
 }
@@ -27,7 +35,12 @@ function* listenForArtistId() {
   yield takeLatest('ARTIST_ID', searchInputId);
 }
 
+function* listenForSelectRelease() {
+  yield takeLatest('SELECT_RELEASE', selectRelease);
+}
+
 export default [
   listenForInputValue,
   listenForArtistId,
+  listenForSelectRelease,
 ];

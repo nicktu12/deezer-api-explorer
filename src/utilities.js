@@ -35,3 +35,7 @@ export const retrieveAlbums = (artistId) => (
     .then(response => albumsResponseCleaner(response))
     .catch(error => alert(error))
 );
+
+export const retrieveReleaseDetails = link => {
+  console.log(link)
+}
