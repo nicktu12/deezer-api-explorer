@@ -29,10 +29,14 @@ class Controls extends React.Component {
 
 };
 
+const mapStateToProps = store => ({
+  autocompleteOptions: store.autocompleteOptions,
+});
+
 const mapDispatchToProps = dispatch => {
   return {
     searchInputValue: (inputValue) => dispatch(inputValueAction(inputValue))
   }
 };
 
-export default connect(null, mapDispatchToProps)(Controls)
+export default connect(mapStateToProps, mapDispatchToProps)(Controls)
