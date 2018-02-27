@@ -72,6 +72,10 @@ h3 {
   border-collapse: collapse; }
   .release-details .empty-space {
     width: calc(20vw + 20px); }
+  .release-details .release-column {
+    text-align: center;
+    font-weight: 400;
+    max-width: 24vw; }
   .release-details img {
     width: 20vw;
     position: absolute;
@@ -81,7 +85,25 @@ h3 {
     height: 32px; }
   .release-details .album-track-tr {
     height: 32px; }
+    .release-details .album-track-tr .track-no {
+      max-width: 5vw; }
+    .release-details .album-track-tr .track-title {
+      max-width: calc(24vw - 20px);
+      padding-right: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .release-details .album-track-tr .track-artist {
+      max-width: calc(14vw - 20px);
+      padding-right: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .release-details .album-track-tr .track-duration {
+      max-width: 10vw; }
     .release-details .album-track-tr td {
       background-color: #2a2a2a; }
+    .release-details .album-track-tr .td-with-underline {
+      border-bottom: 1px solid #1c1c1c; }
 
 /*# sourceMappingURL=index.css.map */

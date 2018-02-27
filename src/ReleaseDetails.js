@@ -9,17 +9,17 @@ const ReleaseDetails = (props) => (
       <th>Title</th>
       <th>Artist</th>
       <th>Time</th>
-      <th>Released</th>
+      <th className="release-column">Released</th>
     </tr>
     {
       props.albumDetails.albumTracks.map((track, index) => (
         <tr className="album-track-tr">
           <td className="empty-space"></td>
-          <td>{index + 1}</td>
-          <td>{track.trackTitle}</td>
-          <td>{track.trackArtist}</td>
-          <td>{track.trackDuration}</td>
-          <td>{props.albumDetails.albumRelease}</td>
+          <td className="td-with-underline track-no">{index + 1}</td>
+          <td className="td-with-underline track-title">{track.trackTitle}</td>
+          <td className="td-with-underline track-artist">{track.trackArtist}</td>
+          <td className="td-with-underline track-duration">{track.trackDuration}</td>
+          <td className="td-with-underline release-column">{props.albumDetails.albumRelease}</td>
         </tr>
       ))
     }

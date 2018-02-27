@@ -106,6 +106,12 @@ h3 {
     width: calc(20vw + 20px);
   }
 
+  .release-column {
+    text-align: center;
+    font-weight: 400;
+    max-width: 24vw;
+  }
+
   img {
     width: 20vw;
     position: absolute;
@@ -120,8 +126,36 @@ h3 {
   .album-track-tr {
     height: 32px;
 
+    .track-no {
+      max-width: 5vw;
+    }
+
+    .track-title {
+      max-width: calc(24vw - 20px);
+      padding-right: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .track-artist {
+      max-width: calc(14vw - 20px);
+      padding-right: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .track-duration {
+      max-width: 10vw;
+    }
+
     td {
       background-color: $background-light;
+    }
+
+    .td-with-underline {
+      border-bottom: 1px solid $background-dark; 
     }
   }
 }
