@@ -32,8 +32,10 @@ class ReleaseList extends React.Component{
           </article>
           <article>
           {
-            this.props.selectedRelease &&
-            <ReleaseDetails />
+            !!Object.keys(this.props.albumDetails).length &&
+            <ReleaseDetails 
+              albumDetails={this.props.albumDetails}  
+            />
           }
           </article>
         </div>
@@ -46,6 +48,7 @@ class ReleaseList extends React.Component{
 const mapStateToProps = store => ({
   albumResults: store.albumResults, 
   selectedRelease: store.selectedRelease,
+  albumDetails: store.albumDetails,
 })
 
 const mapDispatchToProps = dispatch => ({
