@@ -36,8 +36,8 @@ export const retrieveAlbums = (artistId) => (
     .catch(error => alert(error))
 );
 
-export const retrieveReleaseDetails = link => {
-  fetch(`https://cors-anywhere.herokuapp.com/` + link, {
+export const retrieveReleaseDetails = id => {
+  fetch(`https://cors-anywhere.herokuapp.com/` + `https://api.deezer.com/album/${id}`, {
     headers: {
       'Content-type': 'application/json'
     },
