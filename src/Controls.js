@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import searchInputValue from './Controls-actions';
+import { searchInputValue, searchSubmit } from './Controls-actions';
 
 class Controls extends React.Component { 
   
@@ -27,6 +27,15 @@ class Controls extends React.Component {
     });
   }
 
+  inputSelect = () => {
+    const selected = document.getElementById('myInput').value;
+    const selectedObject = this.props.autocompleteOptions.find(option => (
+      option.name === selected
+    ))
+    const selectedId = selectedObject.id;
+    this.props.searchSubmitAction(selectedId);
+  }
+
   render() {
     if (this.state.inputValue.length >= 3) {
       this.props.searchInputAction(this.state.inputValue)
@@ -34,6 +43,7 @@ class Controls extends React.Component {
     return (
       <div>
         <input 
+          id="myInput"
           type="text" 
           placeholder="Search here" 
           onChange={this.inputChange}
@@ -42,13 +52,15 @@ class Controls extends React.Component {
         {
           !!this.props.autocompleteOptions.length &&
             <datalist id="suggestions">
+              <option value="Search Results">Search Results</option>
             {
               this.props.autocompleteOptions.map(option => (
-                <option value={option}></option>
+                <option data-id={option.id}>{option.name}</option>
               ))
             }
             </datalist>
         }
+        <button onClick={this.inputSelect}>Submit</button>
       </div>
     )
   }
@@ -61,7 +73,8 @@ const mapStateToProps = store => ({
 
 const mapDispatchToProps = dispatch => {
   return {
-    searchInputAction: (inputValue) => dispatch(searchInputValue(inputValue))
+    searchInputAction: (inputValue) => dispatch(searchInputValue(inputValue)),
+    searchSubmitAction: (artistId) => dispatch(searchSubmit(artistId))
   }
 };
 

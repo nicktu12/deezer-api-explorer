@@ -1,8 +1,13 @@
-const searchInputValue = inputValue => (
+export const searchInputValue = inputValue => (
   {
     type: 'INPUT_VALUE',
     inputValue,
   }
 );
 
-export { searchInputValue as default };
+export const searchSubmit = artistId => (
+  {
+    type: 'ARTIST_ID',
+    artistId
+  }
+);
