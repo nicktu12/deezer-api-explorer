@@ -1,6 +1,8 @@
-export const inputValueAction = (inputValue) => {
-  return {
+const searchInputValue = inputValue => (
+  {
     type: 'INPUT_VALUE',
-    inputValue
-  };
-};
+    inputValue,
+  }
+);
+
+export { searchInputValue as default };
