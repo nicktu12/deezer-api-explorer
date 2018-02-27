@@ -68,11 +68,15 @@ h3 {
   padding-top: 10vw;
   position: relative;
   width: 100%;
-  text-align: left; }
+  text-align: left;
+  color: #ededed;
+  font-size: 14px; }
   .release-details img {
     width: 20vw;
     position: absolute;
     left: 10px;
     top: 0; }
+  .release-details .album-track-tr {
+    height: 32px; }
 
 /*# sourceMappingURL=index.css.map */

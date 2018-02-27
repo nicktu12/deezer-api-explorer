@@ -100,11 +100,17 @@ h3 {
   position: relative;
   width: 100%;
   text-align: left;
+  color: $light-text;
+  font-size: 14px;
 
   img {
     width: 20vw;
     position: absolute;
     left: 10px;
     top: 0;
+  }
+
+  .album-track-tr {
+    height: 32px;
   }
 }

@@ -12,7 +12,7 @@ const ReleaseDetails = (props) => (
     </tr>
     {
       props.albumDetails.albumTracks.map((track, index) => (
-        <tr>
+        <tr className="album-track-tr">
           <td>{index + 1}</td>
           <td>{track.trackTitle}</td>
           <td>{track.trackArtist}</td>
