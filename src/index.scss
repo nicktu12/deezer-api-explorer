@@ -5,6 +5,7 @@ $background-light: #2a2a2a;
 $accent: #02ffff;
 $light-text: #ededed;
 $dark-text: #7a7a7a;
+$border-radius: 4px;
 
 * {
   margin: 0;
@@ -37,6 +38,7 @@ $dark-text: #7a7a7a;
     height: 50px;
     border: none;
     font-size: 16px;
+    border-radius: $border-radius;
   }
 }
 

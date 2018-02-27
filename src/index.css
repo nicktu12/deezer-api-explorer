@@ -21,7 +21,8 @@
   .search-bar input, .search-bar button {
     height: 50px;
     border: none;
-    font-size: 16px; }
+    font-size: 16px;
+    border-radius: 4px; }
 
 h3 {
   font-weight: 400;
