@@ -5,7 +5,7 @@ $background-light: #2a2a2a;
 $accent: #02ffff;
 $light-text: #ededed;
 $dark-text: #7a7a7a;
-$border-radius: 4px;
+$border-radius: 2px;
 
 * {
   margin: 0;
@@ -42,6 +42,14 @@ $border-radius: 4px;
   }
 }
 
+.search-results-header {
+  padding-top: 5%;
+
+  h3 {
+    color: white;
+  }
+}
+
 h3 {
   font-weight: 400;
   color: $accent;
@@ -68,6 +76,7 @@ h3 {
 
   .details-article {
     margin-top: 30px;
+    min-height: 30vh;
   }
 }
 

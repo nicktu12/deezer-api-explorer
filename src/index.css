@@ -22,7 +22,12 @@
     height: 50px;
     border: none;
     font-size: 16px;
-    border-radius: 4px; }
+    border-radius: 2px; }
+
+.search-results-header {
+  padding-top: 5%; }
+  .search-results-header h3 {
+    color: white; }
 
 h3 {
   font-weight: 400;
@@ -42,7 +47,8 @@ h3 {
   white-space: nowrap;
   overflow-x: scroll; }
 .release-list .details-article {
-  margin-top: 30px; }
+  margin-top: 30px;
+  min-height: 30vh; }
 
 .selected {
   border-bottom: 2px solid #232323; }

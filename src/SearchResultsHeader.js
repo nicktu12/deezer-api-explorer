@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 const SearchResultsHeader = props => (
   <div className="search-results-header">
   {
-    !!props.albumResults.length &&
-    <p>Search results for "{props.searchTerm}"</p>
+    props.albumResults.length > 0 &&
+    <h3>Search results for "{props.searchTerm}"</h3>
   }
   </div>
 );

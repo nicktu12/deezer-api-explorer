@@ -52,7 +52,7 @@ class Controls extends React.Component {
           list="suggestions"
         />
         {
-          !!this.props.autocompleteOptions.length &&
+          this.props.autocompleteOptions.length > 0 &&
             <datalist id="suggestions">
               <option value="Search Results">Search Results</option>
             {

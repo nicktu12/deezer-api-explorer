@@ -8,7 +8,7 @@ import { selectRelease } from './ReleaseList-actions';
 const ReleaseList = props => (
   <section className="release-list">
     {
-    !!props.albumResults.length &&
+      props.albumResults.length > 0 &&
     <div>
       <hr />
       <h3>{props.releaseType.toUpperCase()}</h3>
@@ -27,7 +27,7 @@ const ReleaseList = props => (
       </article>
       <article className="details-article">
         {
-        !!Object.keys(props.albumDetails).length &&
+          Object.keys(props.albumDetails).length > 0 &&
         <ReleaseDetails
           albumDetails={props.albumDetails}
         />
