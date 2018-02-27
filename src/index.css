@@ -28,21 +28,20 @@ h3 {
   font-weight: 400;
   color: #02ffff;
   margin-top: 15px;
-  padding: 5px;
+  padding: 7px;
   position: fixed; }
 
-.release-list {
+.release-list hr {
+  height: 2px;
+  color: #232323;
+  background: #232323;
+  margin-top: 15px;
+  font-size: 0;
+  border: 0; }
+.release-list article {
+  margin: 54px 5px 5px 5px;
   white-space: nowrap;
   overflow-x: scroll; }
-  .release-list hr {
-    height: 2px;
-    color: #232323;
-    background: #232323;
-    margin-top: 15px;
-    font-size: 0;
-    border: 0; }
-  .release-list article {
-    margin: 50px 5px 5px 5px; }
 
 .selected {
   border-bottom: 2px solid #232323; }
