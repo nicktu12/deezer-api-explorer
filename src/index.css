@@ -41,6 +41,8 @@ h3 {
   margin: 5px;
   white-space: nowrap;
   overflow-x: scroll; }
+.release-list .details-article {
+  margin-top: 30px; }
 
 .selected {
   border-bottom: 2px solid #232323; }

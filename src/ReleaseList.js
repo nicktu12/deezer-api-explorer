@@ -31,7 +31,7 @@ class ReleaseList extends React.Component {
             ))
           }
           </article>
-          <article>
+          <article className="details-article">
             {
             !!Object.keys(this.props.albumDetails).length &&
             <ReleaseDetails
