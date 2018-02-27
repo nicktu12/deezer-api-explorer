@@ -21,7 +21,7 @@ function* searchInputId(action) {
 
 function* selectRelease(action) {
   try {
-    const releaseDetails = yield call(retrieveReleaseDetails, action.link)
+    const releaseDetails = yield call(retrieveReleaseDetails, action.link);
     yield put({ type: 'ALBUM_DETAILS', releaseDetails });
   } catch (error) {
     yield put({ type: 'SELECT_RELEASE_ERROR', message: error.message });

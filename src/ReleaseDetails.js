@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const ReleaseDetails = (props) => (
+const ReleaseDetails = props => (
   <table className="release-details">
-    <img src={props.albumDetails.albumCover}/>
+    <img src={props.albumDetails.albumCover} alt="album-cover" />
     <tr className="table-header-tr">
       <th className="empty-space"></th>
       <th>#</th>
@@ -27,3 +28,7 @@ const ReleaseDetails = (props) => (
 );
 
 export default ReleaseDetails;
+
+ReleaseDetails.propTypes = {
+  albumDetails: PropTypes.object,
+};
