@@ -82,7 +82,7 @@ const mapDispatchToProps = dispatch => {
 export default connect(mapStateToProps, mapDispatchToProps)(Controls)
 
 Controls.propTypes = {
-  autocompleteOptions: PropTypes.arrayOf(PropTypes.string)
+  autocompleteOptions: PropTypes.arrayOf(PropTypes.string),
   searchInputAction: PropTypes.func,
   searchSubmitAction: PropTypes.func,
 };
