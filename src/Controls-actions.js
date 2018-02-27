@@ -8,6 +8,6 @@ export const searchInputValue = inputValue => (
 export const searchSubmit = artistId => (
   {
     type: 'ARTIST_ID',
-    artistId
+    artistId,
   }
 );

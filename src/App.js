@@ -8,7 +8,7 @@ import './index.css';
 const App = () => (
   <div className="App">
     <Controls />
-    <ReleaseList releaseType="Albums"/>
+    <ReleaseList releaseType="Albums" />
   </div>
 );
 

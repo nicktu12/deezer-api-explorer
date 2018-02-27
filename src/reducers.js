@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import {
   autocompleteOptions,
-  albumResults
+  albumResults,
 } from './Controls-reducer';
-import { 
+import {
   selectedRelease,
-  albumDetails
+  albumDetails,
 } from './ReleaseList-reducer';
 
 export default combineReducers({
