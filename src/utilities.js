@@ -9,7 +9,7 @@ const autocompleteCleaner = (response, numOfResults) => {
 const albumsResponseCleaner = (response) => {
   return response.data.map(album => ({
     albumImage: album.cover_medium,
-    albumLink: album.link,
+    albumId: album.id,
     albumTitle: album.title,
   }));
 };
@@ -37,5 +37,12 @@ export const retrieveAlbums = (artistId) => (
 );
 
 export const retrieveReleaseDetails = link => {
-  console.log(link)
+  fetch(`https://cors-anywhere.herokuapp.com/` + link, {
+    headers: {
+      'Content-type': 'application/json'
+    },
+  })
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(error => alert(error))
 }

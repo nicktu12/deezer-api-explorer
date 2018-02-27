@@ -23,7 +23,7 @@ class ReleaseList extends React.Component{
               <ReleaseThumbnail 
                 albumImage={album.albumImage}
                 albumTitle={album.albumTitle}
-                albumLink={album.albumLink}
+                albumId={album.albumId}
                 selectRelease={this.props.selectReleaseAction}
                 selectedRelease={this.props.selectedRelease}
               />
@@ -49,7 +49,7 @@ const mapStateToProps = store => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  selectReleaseAction: (link) => dispatch(selectRelease(link))
+  selectReleaseAction: (id) => dispatch(selectRelease(id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReleaseList);
