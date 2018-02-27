@@ -5,46 +5,38 @@ import ReleaseThumbnail from './ReleaseThumbnail';
 import ReleaseDetails from './ReleaseDetails';
 import { selectRelease } from './ReleaseList-actions';
 
-class ReleaseList extends React.Component {
-  constructor() {
-    super();
-  }
-
-  render() {
-    return (
-      <section className="release-list">
+const ReleaseList = props => (
+  <section className="release-list">
+    {
+    !!props.albumResults.length &&
+    <div>
+      <hr />
+      <h3>{props.releaseType.toUpperCase()}</h3>
+      <article>
         {
-        !!this.props.albumResults.length &&
-        <div>
-          <hr />
-          <h3>{this.props.releaseType.toUpperCase()}</h3>
-          <article>
-            {
-            this.props.albumResults.map(album => (
-              <ReleaseThumbnail
-                albumImage={album.albumImage}
-                albumTitle={album.albumTitle}
-                albumId={album.albumId}
-                selectRelease={this.props.selectReleaseAction}
-                selectedRelease={this.props.selectedRelease}
-              />
-            ))
-          }
-          </article>
-          <article className="details-article">
-            {
-            !!Object.keys(this.props.albumDetails).length &&
-            <ReleaseDetails
-              albumDetails={this.props.albumDetails}
-            />
-          }
-          </article>
-        </div>
+        props.albumResults.map(album => (
+          <ReleaseThumbnail
+            albumImage={album.albumImage}
+            albumTitle={album.albumTitle}
+            albumId={album.albumId}
+            selectRelease={props.selectReleaseAction}
+            selectedRelease={props.selectedRelease}
+          />
+        ))
       }
-      </section>
-    );
+      </article>
+      <article className="details-article">
+        {
+        !!Object.keys(props.albumDetails).length &&
+        <ReleaseDetails
+          albumDetails={props.albumDetails}
+        />
+      }
+      </article>
+    </div>
   }
-}
+  </section>
+)
 
 const mapStateToProps = store => ({
   albumResults: store.albumResults,
