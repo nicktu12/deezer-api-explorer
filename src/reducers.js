@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import {
   autocompleteOptions,
   albumResults,
+  searchTerm,
 } from './Controls-reducer';
 import {
   selectedRelease,
@@ -11,6 +12,7 @@ import {
 export default combineReducers({
   autocompleteOptions,
   albumResults,
+  searchTerm,
   selectedRelease,
   albumDetails,
 });

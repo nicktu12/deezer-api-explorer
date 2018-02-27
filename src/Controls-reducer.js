@@ -15,3 +15,12 @@ export function albumResults(state = [], action) {
       return state;
   }
 }
+
+export function searchTerm(state = '', action) {
+  switch (action.type) {
+    case 'INPUT_VALUE':
+      return action.inputValue;
+    default:
+      return state;
+  }
+}
