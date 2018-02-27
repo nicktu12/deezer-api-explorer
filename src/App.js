@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Controls from './Controls';
-import './App.css';
+import './index.css';
 
 const App = () => (
   <div className="App">

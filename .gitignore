@@ -3,6 +3,11 @@
 # dependencies
 /node_modules
 
+# sass files
+.sass-cache
+*.css.map
+#*.scss
+
 # testing
 /coverage
 

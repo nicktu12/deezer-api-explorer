@@ -42,7 +42,7 @@ class Controls extends React.Component {
       this.props.searchInputAction(this.state.inputValue)
     }
     return (
-      <div>
+      <div class="search-bar">
         <input 
           id="myInput"
           type="text" 

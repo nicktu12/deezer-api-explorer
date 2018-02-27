@@ -1,0 +1,18 @@
+// Variables
+$background-dark: #1c1c1c;
+$background-medium: #232323;
+$background-light: #2a2a2a;
+$accent: #02ffff;
+$light-text: #ededed;
+$dark-text: #7a7a7a;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: $background-dark;
+}
+
+.App {
+  padding: 5%;
+}
