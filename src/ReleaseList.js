@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import ReleaseThumbnail from './ReleaseThumbnail'
 
 class ReleaseList extends React.Component{
   constructor() {
@@ -8,12 +9,26 @@ class ReleaseList extends React.Component{
 
   render() {
     return (
-      <div>
+      <section className="release-list">
       { 
         !!this.props.albumResults.length &&
-        <h3>{this.props.releaseType.toUpperCase()}</h3>
+        <div>  
+          <hr />
+          <h3>{this.props.releaseType.toUpperCase()}</h3>
+          <article>
+          {
+            this.props.albumResults.map(album => (
+              <ReleaseThumbnail 
+                albumImage={album.albumImage}
+                albumLink={album.albumLink}
+                albumTitle={album.albumTitle}
+              />
+            ))
+          }
+          </article>
+        </div>
       }
-      </div>
+      </section>
     )
   }
 }

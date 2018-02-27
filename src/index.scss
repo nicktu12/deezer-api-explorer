@@ -43,4 +43,46 @@ $dark-text: #7a7a7a;
 h3 {
   font-weight: 400;
   color: $accent;
+  margin-top: 15px;
+  padding: 5px;
+  position: fixed;
+}
+
+.release-list {
+  white-space: nowrap;
+  overflow-x: scroll;
+
+  hr {
+    height: 1px;
+    color: #232323;
+    background: #232323;
+    margin-top: 15px;
+    font-size: 0;
+    border: 0;
+  }
+
+  article {
+    margin: 50px 5px 5px 5px;
+  }
+}
+
+.thumbnail {
+  width: 17.5%;
+  margin-right: 3%;
+  display: inline-block;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+    color: $accent;
+    font-size: 14px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
