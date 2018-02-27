@@ -2,7 +2,7 @@ import React from 'react';
 
 const ReleaseThumbnail = (props) => (
   <div 
-    className="thumbnail"
+    className={ props.selectedRelease === props.albumLink ? "selected thumbnail" : "thumbnail" }
     onClick={()=>props.selectRelease(props.albumLink)}
   >
     <img src={props.albumImage} />

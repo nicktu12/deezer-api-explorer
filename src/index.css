@@ -34,7 +34,7 @@ h3 {
   white-space: nowrap;
   overflow-x: scroll; }
   .release-list hr {
-    height: 1px;
+    height: 2px;
     color: #232323;
     background: #232323;
     margin-top: 15px;
@@ -43,11 +43,15 @@ h3 {
   .release-list article {
     margin: 50px 5px 5px 5px; }
 
+.selected {
+  border-bottom: 2px solid #232323; }
+
 .thumbnail {
   width: 17.5%;
   margin-right: 3%;
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  padding-bottom: 10px; }
   .thumbnail img {
     width: 100%; }
   .thumbnail p {
