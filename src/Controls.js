@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { searchInputValue, searchSubmit } from './Controls-actions';
 
@@ -79,3 +80,9 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Controls)
+
+Controls.propTypes = {
+  autocompleteOptions: PropTypes.arrayOf(PropTypes.string)
+  searchInputAction: PropTypes.func,
+  searchSubmitAction: PropTypes.func,
+};
