@@ -30,6 +30,7 @@ class Controls extends React.Component {
 
   inputSelect = () => {
     const selected = document.getElementById('myInput').value;
+    console.log(selected)
     const selectedObject = this.props.autocompleteOptions.find(option => (
       option.name === selected
     ))
@@ -42,7 +43,7 @@ class Controls extends React.Component {
       this.props.searchInputAction(this.state.inputValue)
     }
     return (
-      <div class="search-bar">
+      <div className="search-bar">
         <input 
           id="myInput"
           type="text" 

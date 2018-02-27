@@ -2,11 +2,13 @@
 
 import React from 'react';
 import Controls from './Controls';
+import ReleaseList from './ReleaseList';
 import './index.css';
 
 const App = () => (
   <div className="App">
     <Controls />
+    <ReleaseList releaseType="Albums"/>
   </div>
 );
 

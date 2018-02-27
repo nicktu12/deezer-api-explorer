@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux';
-import autocompleteOptions from './Controls-reducer';
+import {
+  autocompleteOptions,
+  albumResults
+} from './Controls-reducer';
 
 export default combineReducers({
   autocompleteOptions,
+  albumResults,
 });

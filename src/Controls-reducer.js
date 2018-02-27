@@ -1,4 +1,4 @@
-function autocompleteOptions(state = [], action) {
+export function autocompleteOptions(state = [], action) {
   switch (action.type) {
     case 'AUTOCOMPLETE_RESULTS':
       return action.autocompleteResults;
@@ -7,4 +7,11 @@ function autocompleteOptions(state = [], action) {
   }
 }
 
-export { autocompleteOptions as default };
+export function albumResults(state = [], action) {
+  switch (action.type) {
+    case 'ALBUM_RESULTS':
+      return action.albums;
+    default:
+      return state;
+  }
+}

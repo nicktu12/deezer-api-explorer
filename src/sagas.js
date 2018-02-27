@@ -13,6 +13,7 @@ function* searchInputValue(action) {
 function* searchInputId(action) {
   try {
     const albums = yield call(retrieveAlbums, action.artistId);
+    yield put({ type: 'ALBUM_RESULTS', albums });
   } catch (error) {
     yield put({ type: 'ALBUM_RETRIEVAL_ERROR', message: error.message });
   }
