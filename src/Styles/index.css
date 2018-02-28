@@ -5,7 +5,7 @@
   background-color: #1c1c1c; }
 
 .App {
-  padding: 5%; }
+  padding: 10vh 5% 5% 5%; }
 
 .search-bar {
   display: flex;
@@ -23,6 +23,21 @@
     border: none;
     font-size: 16px;
     border-radius: 2px; }
+  .search-bar .suggestions {
+    list-style-type: none;
+    top: calc(10vh + 60px);
+    width: 81.3%;
+    position: absolute;
+    padding: 15px;
+    background-color: #232323; }
+    .search-bar .suggestions .autocomplete-option {
+      padding-left: 15px; }
+    .search-bar .suggestions li {
+      background-color: #232323;
+      font-size: 12px;
+      color: #7a7a7a;
+      height: 24px;
+      line-height: 24px; }
 
 .search-results-header {
   padding-top: 5%; }

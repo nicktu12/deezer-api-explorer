@@ -30,7 +30,6 @@ class Controls extends React.Component {
 
   inputSelect = () => {
     const selected = document.getElementById('myInput').value;
-    console.log(selected)
     const selectedObject = this.props.autocompleteOptions.find(option => (
       option.name === selected
     ))
@@ -49,18 +48,23 @@ class Controls extends React.Component {
           type="text" 
           placeholder="Search here" 
           onChange={this.inputChange}
-          list="suggestions"
         />
         {
           this.props.autocompleteOptions.length > 0 &&
-            <datalist id="suggestions">
-              <option value="Search Results">Search Results</option>
+            <ul className="suggestions">
+              <li value="Search Results">Search Results</li>
             {
               this.props.autocompleteOptions.map(option => (
-                <option data-id={option.id}>{option.name}</option>
+                <li 
+                  data-id={option.id}
+                  className="autocomplete-option"
+                  onClick={this.inputSelect}
+                >
+                  {option.name}
+                </li>
               ))
             }
-            </datalist>
+            </ul>
         }
         <button onClick={this.inputSelect}>Submit</button>
       </div>

@@ -15,7 +15,7 @@ $border-radius: 2px;
 }
 
 .App {
-  padding: 5%;
+  padding: 10vh 5% 5% 5%;
 }
 
 .search-bar {
@@ -39,6 +39,28 @@ $border-radius: 2px;
     border: none;
     font-size: 16px;
     border-radius: $border-radius;
+  }
+
+  .suggestions {
+    list-style-type: none;
+    top: calc(10vh + 60px);
+    width: 81.3%;
+    position: absolute;
+    padding: 15px;
+    background-color: $background-medium;
+
+    .autocomplete-option {
+      padding-left: 15px;
+    }
+
+    li {
+      background-color: $background-medium;
+      font-size: 12px;
+      color: $dark-text;
+      height: 24px;
+      line-height: 24px;
+    }
+
   }
 }
 
