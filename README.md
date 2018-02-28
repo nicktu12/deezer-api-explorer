@@ -30,7 +30,6 @@ npm run test
 * [React](https://reactjs.org/) - The javascript framework used
 * [Redux](https://redux.js.org/) - State management for React
 * [Router](https://github.com/reactjs/react-router-redux) - URL Routing for React
-* [Sagas](https://redux-saga.js.org/) - Redux Middleware management
 * This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## Extensions
