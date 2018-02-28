@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const ReleaseDetails = props => (
   <table className="release-details">
     <img src={props.albumDetails.albumCover} alt="album-cover" />
+    <h3>{props.albumDetails.albumTitle}</h3>
     <tr className="table-header-tr">
       <th className="empty-space"></th>
       <th>#</th>

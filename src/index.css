@@ -71,7 +71,7 @@ h3 {
     text-overflow: ellipsis; }
 
 .release-details {
-  margin-top: 10vw;
+  margin-top: 11vw;
   position: relative;
   width: 100%;
   text-align: left;
@@ -84,11 +84,15 @@ h3 {
     text-align: center;
     font-weight: 400;
     max-width: 24vw; }
-  .release-details img {
-    width: 20vw;
+  .release-details h3 {
     position: absolute;
-    left: 10px;
-    top: -10vh; }
+    top: -11vh;
+    left: calc(20vw + 10px); }
+  .release-details img {
+    width: 19vw;
+    position: absolute;
+    left: 12px;
+    top: -11vh; }
   .release-details .table-header-tr {
     height: 32px; }
   .release-details .album-track-tr {
