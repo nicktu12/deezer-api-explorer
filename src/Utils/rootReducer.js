@@ -3,11 +3,11 @@ import {
   autocompleteOptions,
   albumResults,
   searchTerm,
-} from './Controls-reducer';
+} from '../Controls/Controls-reducer';
 import {
   selectedRelease,
   albumDetails,
-} from './ReleaseList-reducer';
+} from '../ReleaseList/ReleaseList-reducer';
 
 export default combineReducers({
   autocompleteOptions,

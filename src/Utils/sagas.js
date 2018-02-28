@@ -1,5 +1,5 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { retrieveSearchResults, retrieveAlbums, retrieveReleaseDetails } from './utilities';
+import { retrieveSearchResults, retrieveAlbums, retrieveReleaseDetails } from './fetchUtilities';
 
 function* searchInputValue(action) {
   try {

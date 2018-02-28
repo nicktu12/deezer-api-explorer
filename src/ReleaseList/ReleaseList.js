@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import ReleaseThumbnail from './ReleaseThumbnail';
-import ReleaseDetails from './ReleaseDetails';
+import ReleaseThumbnail from '../ReleaseThumbnail/ReleaseThumbnail';
+import ReleaseDetails from '../ReleaseDetails/ReleaseDetails';
 import { selectRelease } from './ReleaseList-actions';
 
 const ReleaseList = props => (
