@@ -9,12 +9,12 @@ npm install
 ```
 The Deezer API is not CORS enabled, and the following proxy is used to retrieve the data: `https://cors-anywhere.herokuapp.com`
 
-To start the application on `localhost:3000`, enter the following command.
+To start the application on `http://localhost:3000/`, enter the following command.
 
 ```
 npm start
 ```
-Any changes made to the index.scss file will need to be translated into css with the following command from the `./Styles` directory:
+Any changes made to the `index.scss` file will need to be translated into css with the following command from the `./Styles` directory:
 
 ```
 sass --watch index.scss
