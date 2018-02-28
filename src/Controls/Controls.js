@@ -44,7 +44,7 @@ class Controls extends React.Component {
   }
 
   handleSubmit = () => {
-    const selected = document.getElementById('myInput').value;
+    const selected = document.getElementById('search-bar-input').value;
     const selectedObject = this.props.autocompleteOptions.find(option => (
       option.name.toLowerCase() === selected.toLowerCase()
     ))
@@ -60,7 +60,7 @@ class Controls extends React.Component {
     return (
       <div className="search-bar">
         <input 
-          id="myInput"
+          id="search-bar-input"
           type="text" 
           placeholder="Search here" 
           onChange={this.inputChange}
