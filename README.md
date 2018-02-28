@@ -7,7 +7,7 @@ Clone down this repository and install npm. Execute the following command in you
 ```
 npm install
 ```
-The Deezer API is not CORS enabled, and the following proxy is used to retrieve the data: https://cors-anywhere.herokuapp.com
+The Deezer API is not CORS enabled, and the following proxy is used to retrieve the data: `https://cors-anywhere.herokuapp.com`
 
 To start the application on localhost:3000, enter the following command.
 
