@@ -1,5 +1,5 @@
 # Deezer API Explorer
-This application was built to visualize endpoints of the Deezer API. Tasks included implementing an autocomplete feature, retrieving albums based on a selected artist and viewing album details for a selected album. The application was build with React, Redux, Redux-sagas and SCSS/Sass.
+This application was built to visualize endpoints of the Deezer API. Tasks included implementing an autocomplete feature, retrieving albums based on a selected artist and viewing album details for a selected album. The application was built with React, Redux, Redux-sagas and SCSS/Sass.
 
 ## Getting Started
 Clone down this repository and install npm. Execute the following command in your CLI.
