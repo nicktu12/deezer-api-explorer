@@ -31,8 +31,10 @@
     padding: 15px;
     background-color: #232323; }
     .search-bar .suggestions .autocomplete-option {
-      padding-left: 15px; }
+      padding-left: 15px;
+      cursor: pointer; }
     .search-bar .suggestions li {
+      cursor: default;
       background-color: #232323;
       font-size: 12px;
       color: #7a7a7a;

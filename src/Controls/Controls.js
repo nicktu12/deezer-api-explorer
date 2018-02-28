@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { searchInputValue, searchSubmit } from './Controls-actions';
+import { select } from 'redux-saga/effects';
 
 class Controls extends React.Component { 
   
@@ -26,15 +27,30 @@ class Controls extends React.Component {
     this.setState({
       inputValue: event.target.value,
     });
+    if (this.props.autocompleteOptions.length > 0) {
+      document.getElementsByClassName("suggestions")[0].style.top = 'calc(10vh + 60px)';
+    }
   }
 
-  inputSelect = () => {
+  inputSelect = (id) => {
+    this.props.searchSubmitAction(id);
+    document.getElementsByClassName("suggestions")[0].style.top = '-1000px';
+    const selectedOption = this.props.autocompleteOptions.find(option => (
+      option.id === id
+    ))
+    this.setState({
+      inputValue: selectedOption.name,
+    });
+  }
+
+  handleSubmit = () => {
     const selected = document.getElementById('myInput').value;
     const selectedObject = this.props.autocompleteOptions.find(option => (
-      option.name === selected
+      option.name.toLowerCase() === selected.toLowerCase()
     ))
     const selectedId = selectedObject.id;
     this.props.searchSubmitAction(selectedId);
+    document.getElementsByClassName("suggestions")[0].style.top = '-1000px';
   }
 
   render() {
@@ -52,13 +68,12 @@ class Controls extends React.Component {
         {
           this.props.autocompleteOptions.length > 0 &&
             <ul className="suggestions">
-              <li value="Search Results">Search Results</li>
+              <li>Search Results</li>
             {
               this.props.autocompleteOptions.map(option => (
                 <li 
-                  data-id={option.id}
                   className="autocomplete-option"
-                  onClick={this.inputSelect}
+                  onClick={() => this.inputSelect(option.id)}
                 >
                   {option.name}
                 </li>
@@ -66,7 +81,7 @@ class Controls extends React.Component {
             }
             </ul>
         }
-        <button onClick={this.inputSelect}>Submit</button>
+        <button onClick={this.handleSubmit}>Submit</button>
       </div>
     )
   }
