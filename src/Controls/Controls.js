@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { searchInputValue, searchSubmit } from './Controls-actions';
-import { select } from 'redux-saga/effects';
 
 class Controls extends React.Component { 
   
@@ -13,15 +12,6 @@ class Controls extends React.Component {
       inputValue: '',
     };
   }
-
-/*  shouldComponentUpdate(nextProps) {*/
-    //console.log(nextProps, this.props)
-    //if (this.props.autocompleteOptions.length) {
-      //return nextProps.autocompleteOptions === this.props.autocompleteOptions;
-    //} else {
-      //return true
-    //}
-  //}
 
   inputChange = event => {
     this.setState({
