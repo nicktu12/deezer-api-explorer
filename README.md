@@ -4,19 +4,27 @@ This application was built to visualize endpoints of the Deezer API. Tasks inclu
 ## Getting Started
 Clone down this repository and install npm. Execute the following command in your CLI.
 
-```npm install```
+```
+npm install
+```
 The Deezer API is not CORS enabled, and the following proxy is used to retrieve the data: https://cors-anywhere.herokuapp.com
 
 To start the application on localhost:3000, enter the following command.
 
-```npm start```
+```
+npm start
+```
 Any changes made to the index.scss file will need to be translated into css with the following command from the ./Styles directory:
 
-```sass --watch index.scss```
+```
+sass --watch index.scss
+```
 ## Running the tests
 All Redux actions and reducers are tested using the command
 
-```npm run test```
+```
+npm run test
+```
 ## Built With
 
 * [React](https://reactjs.org/) - The javascript framework used
