@@ -40,6 +40,8 @@
       color: #7a7a7a;
       height: 24px;
       line-height: 24px; }
+      .search-bar .suggestions li:hover {
+        background-color: #2a2a2a; }
 
 .search-results-header {
   padding-top: 5%; }

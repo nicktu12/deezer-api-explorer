@@ -61,6 +61,10 @@ $border-radius: 2px;
       color: $dark-text;
       height: 24px;
       line-height: 24px;
+
+      &:hover {
+        background-color: $background-light;
+      }
     }
 
   }
