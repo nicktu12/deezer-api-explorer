@@ -10,7 +10,7 @@ $border-radius: 2px;
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: $background-dark;
 }
 
@@ -34,7 +34,8 @@ $border-radius: 2px;
     background-color: $accent;
   }
 
-  input, button {
+  input,
+  button {
     height: 50px;
     border: none;
     font-size: 16px;
@@ -44,7 +45,7 @@ $border-radius: 2px;
   .suggestions {
     list-style-type: none;
     top: calc(10vh + 60px);
-    width: 81.3%;
+    width: 70.5%;
     position: absolute;
     padding: 15px;
     background-color: $background-medium;
@@ -66,7 +67,6 @@ $border-radius: 2px;
       height: 24px;
       line-height: 24px;
     }
-
   }
 }
 
@@ -86,7 +86,6 @@ h3 {
 }
 
 .release-list {
-
   hr {
     height: 2px;
     color: $background-medium;
@@ -202,7 +201,7 @@ h3 {
     }
 
     .td-with-underline {
-      border-bottom: 1px solid $background-dark; 
+      border-bottom: 1px solid $background-dark;
     }
   }
 }
