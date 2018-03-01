@@ -33,6 +33,9 @@ npm run test
 * This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## Extensions
+
+See branch `extensions` for work completed after the assignment deadline.
+
 See issues for this repository.
 
 ## Authors
