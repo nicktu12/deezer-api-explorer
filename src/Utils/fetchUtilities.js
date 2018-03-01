@@ -20,6 +20,7 @@ const trackDurationCleaner = duration => (
 
 const albumTracksCleaner = tracksArray => (
   tracksArray.data.map(track => ({
+    trackId: track.id,
     trackTitle: track.title,
     trackArtist: track.artist.name,
     trackDuration: trackDurationCleaner(track.duration),

@@ -63,6 +63,7 @@ class Controls extends React.Component {
             {
               this.props.autocompleteOptions.map(option => (
                 <li 
+                  key={option.id}
                   className="autocomplete-option"
                   onClick={() => this.inputSelect(option.id)}
                 >

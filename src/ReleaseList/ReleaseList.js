@@ -16,6 +16,7 @@ const ReleaseList = props => (
         {
         props.albumResults.map(album => (
           <ReleaseThumbnail
+            key={album.albumId}
             albumImage={album.albumImage}
             albumTitle={album.albumTitle}
             albumId={album.albumId}

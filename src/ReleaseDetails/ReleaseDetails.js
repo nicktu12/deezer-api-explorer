@@ -15,7 +15,10 @@ const ReleaseDetails = props => (
     </tr>
     {
       props.albumDetails.albumTracks.map((track, index) => (
-        <tr className="album-track-tr">
+        <tr 
+          className="album-track-tr"
+          key={track.trackId} 
+        >
           <td className="empty-space"></td>
           <td className="td-with-underline track-no">{index + 1}</td>
           <td className="td-with-underline track-title">{track.trackTitle}</td>
