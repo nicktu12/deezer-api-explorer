@@ -31,6 +31,7 @@ class Controls extends React.Component {
     this.setState({
       inputValue: selectedOption.name,
     });
+    document.getElementById('search-bar-input').value = selectedOption.name;
   }
 
   handleSubmit = () => {
