@@ -62,7 +62,7 @@ class Controls extends React.Component {
         {
           this.props.autocompleteOptions.length > 0 &&
             <ul className="suggestions">
-              <li>Search Results</li>
+              <li>Search Results<span></span></li>
             {
               this.props.autocompleteOptions.map(option => (
                 <li 

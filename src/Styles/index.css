@@ -2,71 +2,69 @@
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: #1c1c1c;
-}
+  background-color: #1c1c1c; }
 
 .App {
-  padding: 10vh 5% 5% 5%;
-}
+  padding: 10vh 5% 5% 5%; }
 
 .search-bar {
   display: flex;
-  justify-content: space-between;
-}
-.search-bar input {
-  width: 80%;
-  background-color: #232323;
-  color: #7a7a7a;
-  padding-left: 12px;
-}
-.search-bar button {
-  width: 15%;
-  background-color: #02ffff;
-}
-.search-bar input,
-.search-bar button {
-  height: 50px;
-  border: none;
-  font-size: 16px;
-  border-radius: 2px;
-}
-.search-bar .suggestions {
-  list-style-type: none;
-  top: calc(10vh + 60px);
-  width: 70.5%;
-  position: absolute;
-  padding: 15px;
-  background-color: #232323;
-}
-.search-bar .suggestions .autocomplete-option {
-  padding-left: 15px;
-  cursor: pointer;
-}
-.search-bar .suggestions .autocomplete-option:hover {
-  background-color: #2a2a2a;
-}
-.search-bar .suggestions li {
-  cursor: default;
-  background-color: #232323;
-  font-size: 12px;
-  color: #7a7a7a;
-  height: 24px;
-  line-height: 24px;
-}
+  justify-content: space-between; }
+  .search-bar input {
+    width: 80%;
+    background-color: #232323;
+    color: #7a7a7a;
+    padding-left: 12px; }
+  .search-bar button {
+    width: 15%;
+    background-color: #02ffff; }
+  .search-bar input,
+  .search-bar button {
+    height: 50px;
+    border: none;
+    font-size: 16px;
+    border-radius: 2px; }
+  .search-bar .suggestions {
+    list-style-type: none;
+    top: calc(10vh + 60px);
+    width: 70.5%;
+    position: absolute;
+    padding: 15px;
+    background-color: #232323; }
+    .search-bar .suggestions .autocomplete-option {
+      padding-left: 15px;
+      cursor: pointer; }
+      .search-bar .suggestions .autocomplete-option:hover {
+        background-color: #2a2a2a; }
+    .search-bar .suggestions li {
+      cursor: default;
+      background-color: #232323;
+      font-size: 12px;
+      color: #7a7a7a;
+      height: 24px;
+      line-height: 24px;
+      position: relative; }
+      .search-bar .suggestions li span {
+        background-image: url("../assets/tri.svg");
+        background-size: cover;
+        height: 15px;
+        top: -26px;
+        width: 15px;
+        left: 20px;
+        background-color: rgba(0, 0, 0, 0);
+        transform: rotate(270deg);
+        position: absolute; }
 
 .search-results-header {
-  padding-top: 5%;
-}
-.search-results-header h3 {
-  color: white;
-}
+  padding-top: 5%; }
+  .search-results-header h3 {
+    color: white; }
 
 h3 {
   font-weight: 400;
   color: #02ffff;
   margin-top: 15px;
-  padding: 7px;
-}
+  padding: 7px; }
 
 .release-list hr {
   height: 2px;
@@ -74,41 +72,34 @@ h3 {
   background: #232323;
   margin-top: 15px;
   font-size: 0;
-  border: 0;
-}
+  border: 0; }
 .release-list article {
   margin: 5px;
   white-space: nowrap;
-  overflow-x: scroll;
-}
+  overflow-x: scroll; }
 .release-list .details-article {
   margin-top: 30px;
-  min-height: 30vh;
-}
+  min-height: 30vh; }
 
 .selected {
-  border-bottom: 2px solid #232323;
-}
+  border-bottom: 2px solid #232323; }
 
 .thumbnail {
   width: 17.5%;
   margin-right: 3%;
   display: inline-block;
   cursor: pointer;
-  padding-bottom: 10px;
-}
-.thumbnail img {
-  width: 100%;
-}
-.thumbnail p {
-  text-align: center;
-  color: #02ffff;
-  font-size: 14px;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+  padding-bottom: 10px; }
+  .thumbnail img {
+    width: 100%; }
+  .thumbnail p {
+    text-align: center;
+    color: #02ffff;
+    font-size: 14px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
 
 .release-details {
   margin-top: 11vw;
@@ -117,58 +108,45 @@ h3 {
   text-align: left;
   color: #ededed;
   font-size: 14px;
-  border-collapse: collapse;
-}
-.release-details .empty-space {
-  width: calc(20vw + 20px);
-}
-.release-details .release-column {
-  text-align: center;
-  font-weight: 400;
-  max-width: 24vw;
-}
-.release-details h3 {
-  position: absolute;
-  top: -11vh;
-  left: calc(20vw + 10px);
-}
-.release-details img {
-  width: 19vw;
-  position: absolute;
-  left: 12px;
-  top: -11vh;
-}
-.release-details .table-header-tr {
-  height: 32px;
-}
-.release-details .album-track-tr {
-  height: 32px;
-}
-.release-details .album-track-tr .track-no {
-  max-width: 5vw;
-}
-.release-details .album-track-tr .track-title {
-  max-width: calc(24vw - 20px);
-  padding-right: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.release-details .album-track-tr .track-artist {
-  max-width: calc(14vw - 20px);
-  padding-right: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.release-details .album-track-tr .track-duration {
-  max-width: 10vw;
-}
-.release-details .album-track-tr td {
-  background-color: #2a2a2a;
-}
-.release-details .album-track-tr .td-with-underline {
-  border-bottom: 1px solid #1c1c1c;
-}
+  border-collapse: collapse; }
+  .release-details .empty-space {
+    width: calc(20vw + 20px); }
+  .release-details .release-column {
+    text-align: center;
+    font-weight: 400;
+    max-width: 24vw; }
+  .release-details h3 {
+    position: absolute;
+    top: -11vh;
+    left: calc(20vw + 10px); }
+  .release-details img {
+    width: 19vw;
+    position: absolute;
+    left: 12px;
+    top: -11vh; }
+  .release-details .table-header-tr {
+    height: 32px; }
+  .release-details .album-track-tr {
+    height: 32px; }
+    .release-details .album-track-tr .track-no {
+      max-width: 5vw; }
+    .release-details .album-track-tr .track-title {
+      max-width: calc(24vw - 20px);
+      padding-right: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .release-details .album-track-tr .track-artist {
+      max-width: calc(14vw - 20px);
+      padding-right: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .release-details .album-track-tr .track-duration {
+      max-width: 10vw; }
+    .release-details .album-track-tr td {
+      background-color: #2a2a2a; }
+    .release-details .album-track-tr .td-with-underline {
+      border-bottom: 1px solid #1c1c1c; }
 
 /*# sourceMappingURL=index.css.map */
