@@ -13,6 +13,12 @@ class Controls extends React.Component {
     };
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.inputValue.length >= 3 && prevState !== this.state) {
+      this.props.searchInputAction(this.state.inputValue)
+    }
+  }
+
   inputChange = event => {
     this.setState({
       inputValue: event.target.value,
@@ -45,9 +51,6 @@ class Controls extends React.Component {
   }
 
   render() {
-    if (this.state.inputValue.length >= 3) {
-      this.props.searchInputAction(this.state.inputValue)
-    }
     return (
       <div className="search-bar">
         <input 
